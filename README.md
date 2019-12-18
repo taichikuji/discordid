@@ -60,6 +60,6 @@ After all of this, here it comes the important part. You want to edit what you w
 
 You will also want to modify this part of the file ``<div class="contents-18-Yxp">Add Username_Template</div>`` with, again, the name you currently have on Discord or another value you consider important. I personally made it as a "Send me to discord" button to make it easier for people that visit my site to actually add me.
 
-You can also change the background easily by changing the values of the css file from ``background:#2a2d33`` to another value if you only want to change the color, or change the whole thing to ``background-image:url(&quot;pfp/taichiprofile.webp&quot;);"``
+You can also change the background easily by changing the values of the css file from ``background:#2a2d33`` to another value if you only want to change the color, or change the whole thing to ``background-image:url(&quot;pfp/image.webp&quot;);"`` to change it to an image. make sure to upload certain image to the folder ``pfp\image.webp`` or change the source itself to an url if you trust the site you're embedding the image from.
 
 Other than that, there's not much else to do! If you did things properly, you will have your own introduction to your Discord up and running, also looking shiny!
