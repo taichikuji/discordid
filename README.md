@@ -20,13 +20,13 @@ First of all, you need to go to the head and pay attention to the information i 
     <meta name="viewport" content="user-scalable=no, width=device-width" />
 	<link rel="icon" href="pfp/profilepicture.webp">
     <link rel="stylesheet" href="main.css">
+    
+ <title>Taichikuji's Profile!</title>
 ```
 
 Here we can see that we have ``<link rel="icon" href="pfp/profilepicture.webp">`` which you will need to change to whatever you want (if you change this, make sure to know what are you doing). By default you will have the profile picture that is located inside the folder, but you can change it to your own icon or image.
 ### Twitter
 ```
- <title>Taichikuji's Profile!</title>
-
     <!-- twitter meta info -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@taichikuji" />
