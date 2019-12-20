@@ -25,6 +25,8 @@
 									<meta property="og:image" content="pfp/profilepicture.webp" />
 									<!-- Once again, here you can input whatever picture you want to properly show on Discord. by default it will display the profile picture to avoid any bugs. -->
 									<meta property="og:description" content="This is displaying because somehow this image is missing." />
+									<!-- js -->
+									<script src="js/js.js"></script> 
 								</head>
 								<body>
 									<div class="outer">
@@ -35,8 +37,8 @@
 													<div class="headerText">
 														<div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignCenter-1dQNNs noWrap-3jynv6" style="flex: 1 1 auto;">
 															<div class="headerTagNoNickname-ENx6no headerTag-2pZJzA size14-3iUx6q weightNormal-WI4TcG size16-14cGz5 nameTag-m8r81H">
-																<span class="username headerTagUsernameNoNickname-2_H881 weightSemiBold-NJexzi">Username_Template</span>
-																<span class="discriminator">#0001</span>
+																<span id="userid" class="username headerTagUsernameNoNickname-2_H881 weightSemiBold-NJexzi">Username_Template</span>
+																<span id="numberid" class="discriminator">#0001</span>
 															</div>
 														</div>
 													</div>
@@ -46,7 +48,7 @@
 															<span class="pillMessage-1btqlx medium-zmzTW- size16-14cGz5 height20-mO2eIN">Available</span>
 														</div>
 													</div>
-													<button onclick="window.location.href='https://discordapp.com/channels/@me/'" type="button" class="marginTop40-i-78cZ button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN">
+													<button onclick="copyandgo()" type="button" class="marginTop40-i-78cZ button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN">
 														<div class="contents-18-Yxp">Add Username_Template</div>
 													</button>
 												</div>
