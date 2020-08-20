@@ -1,0 +1,20 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "This is a template of an Introduction site i made myself with Discord in mind.",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taichikuji/template-discord-introduction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taichikuji/template-discord-introduction/issues"
+  },
+  "homepage": "https://github.com/taichikuji/template-discord-introduction#readme"
+}

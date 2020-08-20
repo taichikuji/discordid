@@ -1,7 +1,7 @@
 function CopyAndGo() {
-    let CopyText = document.getElementById("userid");
-    let CopyNumber = document.getElementById("numberid");
-    let TextArea = document.createElement("textarea");
+    let CopyText = document.getElementById("UserId");
+    let CopyNumber = document.getElementById("NumberId");
+    let TextArea = document.createElement("TextArea");
     TextArea.value = CopyText.textContent + CopyNumber.textContent;
     document.body.appendChild(TextArea);
     TextArea.select();
