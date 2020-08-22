@@ -1,3 +1,4 @@
 [build]
     publish = "dist"
     functions = "functions"
+    command = "npm install"

@@ -21,7 +21,6 @@ async function getData() {
     if (params.get('id')) {
         const response = await fetch("./.netlify/functions/node-fetch?id=" + params.get('id')).then((resp) => resp.json());
         const data = response['msg'];
-        console.log(data);
         document.getElementById("UserId").innerHTML = data.username
         document.getElementById("NumberId").innerHTML = "#" + data.discriminator
         document.getElementById("AccessButton").innerHTML = "Add " + data.username
