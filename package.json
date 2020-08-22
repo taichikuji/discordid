@@ -1,8 +1,8 @@
 {
   "name": "discordid",
   "version": "1.0.1",
-  "description": "This is a template of an Introduction site i made myself with Discord in mind.",
-  "main": "js/index.js",
+  "description": "This is a template of an Introduction site I made myself with Discord in mind.",
+  "main": "js/js.js",
   "scripts": {
     "postinstall": "netlify-lambda install"
   },
