@@ -1,10 +1,10 @@
 {
-  "name": "discord",
-  "version": "1.0.0",
+  "name": "discordid",
+  "version": "1.0.1",
   "description": "This is a template of an Introduction site i made myself with Discord in mind.",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
-
+    "postinstall": "netlify-lambda install"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/taichikuji/template-discord-introduction/issues"
   },
-  "homepage": "https://github.com/taichikuji/template-discord-introduction#readme"
+  "homepage": "https://github.com/taichikuji/template-discord-introduction#readme",
+  "dependencies": {
+    "netlify-lambda": "^2.0.1"
+  }
 }

@@ -1,2 +1,3 @@
 [build]
     publish = "dist"
+    functions = "functions"
