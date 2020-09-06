@@ -1,22 +1,22 @@
 {
   "name": "discordid",
   "version": "1.0.1",
-  "description": "This is a template of an Introduction site I made myself with Discord in mind.",
+  "description": "A profile maker powered by Discord!",
   "main": "js/js.js",
   "scripts": {
     "postinstall": "netlify-lambda install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taichikuji/template-discord-introduction.git"
+    "url": "git+https://github.com/taichikuji/discordid.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/taichikuji/template-discord-introduction/issues"
+    "url": "https://github.com/taichikuji/discordid/issues"
   },
-  "homepage": "https://github.com/taichikuji/template-discord-introduction#readme",
+  "homepage": "https://github.com/taichikuji/discordid#readme",
   "dependencies": {
     "netlify-lambda": "^2.0.1"
   }

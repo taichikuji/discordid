@@ -26,6 +26,6 @@ async function getData() {
         document.getElementById("AccessButton").innerHTML = "Add " + data.username
         document.getElementById("UrlImage").style = "background-image: url(https://cdn.discordapp.com/avatars/" + data.id + "/" + data.avatar + ".webp);"
     } else {
-        document.getElementById("Square").innerHTML = "<p>Hello! I'm Taichi.<br/>You're visiting the site without an ID, please visit the wiki for more info <a href='https://github.com/taichikuji/template-discord-introduction/wiki'>「here」</a></p>"
+        document.getElementById("Square").innerHTML = "<p>Hello! I'm Taichi.<br/>You're visiting the site without an ID, please visit the wiki for more info <a href='https://github.com/taichikuji/discordid/wiki'>「here」</a></p>"
     }
 }

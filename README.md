@@ -1,8 +1,8 @@
-# Discord themed introduction profile
+# Discordid: A profile maker powered by Discord!
 
-<p align="center"><img src="media/logo.png" width="150px" /><br/>
-<img src="https://img.shields.io/github/license/taichikuji/template-discord-introduction?color=FF3351&logo=github" />
-<img src="https://img.shields.io/github/commit-activity/w/taichikuji/template-discord-introduction?label=commits&logo=github" />
+<p align="center"><img src="media/logo.webp" width="150px" /><br/>
+<img src="https://img.shields.io/github/license/taichikuji/discordid?color=FF3351&logo=github" />
+<img src="https://img.shields.io/github/commit-activity/w/taichikuji/discordid?label=commits&logo=github" />
 <img src="https://img.shields.io/website?url=https%3A%2F%2Fdiscordid.netlify.com&logo=netlify" />
 </p>
 
@@ -14,16 +14,18 @@ After completing this project, I felt like I understood the pros and cons of usi
 
 ## How do I make it work?
 
-There's a quick introduction on how to work with **discordid** on the **[wiki!](https://github.com/taichikuji/template-discord-introduction/wiki)**
+There's a quick introduction on how to work with **discordid** on the **[wiki!](https://github.com/taichikuji/discordid/wiki)**
 
 ## What is this project exactly?
 
-This is a template of an Introduction site I made myself with Discord in mind.
+This project is a website hosted on netlify to show off your Discord profile anywhere you want! It'll show your profile picture and your user in a simple but neat way!
 
-It uses the almost identical css assets from the site, and it's made so you only have to edit the information inside and use it at your own will!
+This was initially a template of an Introduction site I made myself with Discord in mind.
 
-This is a static site with no php behind (but will thought how to add in the future) so you don't have to worry, you can easily implement it with GitHub pages, your personal nginx server or your prefered hosting service!
+It uses the almost identical css assets from the site!
 
-![This is how the site looks!](media/preview.png)
+This is a static site with no php behind, you can easily implement your own fork with GitHub pages, your personal netlify site or your prefered hosting service!
 
-### If you want to learn more, you can go to the [Wiki!](https://github.com/taichikuji/template-discord-introduction/wiki)
+![This is how the site looks!](media/preview.webp)
+
+### If you want to learn more, you can go to the [Wiki!](https://github.com/taichikuji/discordid/wiki)
