@@ -1,19 +1,38 @@
 .inner {
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position: relative
 }
 
 .outer {
   display: table;
   position: absolute;
   height: 100%;
+  width: 100%
+}
+
+.bg {
+  top: 0;
+  left: 0;
+  position: fixed;
   width: 100%;
+  height: 50%;
+  min-width: 780px;
+  min-height: 780px;
+  max-width: 1000px;
+  max-height: 1000px;
+  background: url(media/background.png) 0 0/contain no-repeat;
+  border: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  bottom: 0;
+  right: 0
 }
 
 .middle {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: middle
 }
 
 .button-38aScr {
@@ -39,154 +58,145 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none
 }
 
 .button-38aScr:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: .5
 }
 
 .lookFilled-1Gx00P.colorBrand-3pXr91 {
   color: #fff;
-  background-color: #7289da;
+  background-color: #7289da
 }
 
 .lookFilled-1Gx00P.colorBrand-3pXr91:hover {
-  background-color: #677bc4;
+  background-color: #677bc4
 }
 
 .lookFilled-1Gx00P.colorBrand-3pXr91:active {
-  background-color: #5b6eae;
+  background-color: #5b6eae
 }
 
 .lookFilled-1Gx00P.colorBrand-3pXr91:disabled {
-  background-color: #7289da;
+  background-color: #7289da
 }
 
 .lookFilled-1Gx00P {
-  -webkit-transition: background-color 0.17s ease, color 0.17s ease;
-  transition: background-color 0.17s ease, color 0.17s ease;
+  -webkit-transition: background-color .17s ease, color .17s ease;
+  transition: background-color .17s ease, color .17s ease
 }
 
 .sizeLarge-1vSeWK {
   width: 130px;
   height: 44px;
   min-width: 130px;
-  min-height: 44px;
+  min-height: 44px
 }
 
 .grow-q77ONN {
-  width: auto;
+  width: auto
 }
 
 .fullWidth-1orjjo {
-  width: 100%;
+  width: 100%
 }
 
 .lookFilled-1Gx00P .contents-18-Yxp {
   margin: 0 auto;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: hidden
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none
 }
 
 a:checked {
-  color: aliceblue;
+  color: #f0f8ff
 }
 
-@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media (-ms-high-contrast:active),
+(-ms-high-contrast:none) {
   .lookFilled-1Gx00P .contents-18-Yxp {
-    margin: 0;
+    margin: 0
   }
 }
 
 .flex-1O1GKY {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex
 }
 
 .alignCenter-1dQNNs {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center
 }
 
 .alignStretch-DpGPf3 {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
-  align-items: stretch;
+  align-items: stretch
 }
 
 .justifyStart-2NDFzi {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: flex-start;
+  justify-content: flex-start
 }
 
 .justifyCenter-3D2jYp {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center
 }
 
 .noWrap-3jynv6 {
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap
 }
 
 .directionRow-3v3tfG {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row;
+  flex-direction: row
 }
 
 .weightNormal-WI4TcG {
-  font-weight: 400;
+  font-weight: 400
 }
 
 .weightSemiBold-NJexzi {
-  font-weight: 600;
+  font-weight: 600
 }
 
 .size14-3iUx6q {
-  font-size: 14px;
+  font-size: 14px
 }
 
 .size16-14cGz5 {
-  font-size: 16px;
+  font-size: 16px
 }
 
 .height20-mO2eIN {
-  line-height: 20px;
+  line-height: 20px
 }
 
 .marginTop8-1DLZ1n {
-  margin-top: 8px;
+  margin-top: 8px
 }
 
 .margbot {
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .marginTop40-i-78cZ {
-  margin-top: 40px;
-}
-
-.theme-dark .spoilerContainer-331r0R.hidden-HHr2R9:not(:focus) {
-  -webkit-box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.theme-light .spoilerContainer-331r0R.hidden-HHr2R9:not(:focus) {
-  -webkit-box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.1);
+  margin-top: 40px
 }
 
 body,
@@ -200,7 +210,7 @@ span {
   font-style: inherit;
   font-family: inherit;
   font-size: 100%;
-  vertical-align: baseline;
+  vertical-align: baseline
 }
 
 body {
@@ -213,98 +223,98 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background: #2a2d33;
+  background: #202225
 }
 
 ::-webkit-input-placeholder {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 ::-moz-placeholder {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 :-ms-input-placeholder {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 button {
   font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
   border: 0;
-  cursor: pointer;
+  cursor: pointer
 }
 
 @font-face {
   font-family: Whitney;
   font-weight: 300;
-  src: url(fonts/375f5d0b0a54b53b92c351d7475eb152.woff) format("woff");
+  src: url(fonts/375f5d0b0a54b53b92c351d7475eb152.woff) format("woff")
 }
 
 @font-face {
   font-family: Whitney;
   font-weight: 400;
-  src: url(fonts/e8acd7d9bf6207f99350ca9f9e23b168.woff) format("woff");
+  src: url(fonts/e8acd7d9bf6207f99350ca9f9e23b168.woff) format("woff")
 }
 
 @font-face {
   font-family: Whitney;
   font-weight: 500;
-  src: url(fonts/3bdef1251a424500c1b3a78dea9b7e57.woff) format("woff");
+  src: url(fonts/3bdef1251a424500c1b3a78dea9b7e57.woff) format("woff")
 }
 
 @font-face {
   font-family: Whitney;
   font-weight: 600;
-  src: url(fonts/be0060dafb7a0e31d2a1ca17c0708636.woff) format("woff");
+  src: url(fonts/be0060dafb7a0e31d2a1ca17c0708636.woff) format("woff")
 }
 
 @font-face {
   font-family: Whitney;
   font-weight: 700;
-  src: url(fonts/8e12fb4f14d9c4592eb8ec9f22337b04.woff) format("woff");
+  src: url(fonts/8e12fb4f14d9c4592eb8ec9f22337b04.woff) format("woff")
 }
 
 @font-face {
   font-family: SourceCodePro;
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/375f5d0b0a54b53b92c351d7475eb152.woff) format("woff");
+  src: url(fonts/375f5d0b0a54b53b92c351d7475eb152.woff) format("woff")
 }
 
 @font-face {
   font-family: SourceCodePro;
   font-style: normal;
   font-weight: 600;
-  src: url(fonts/c383b1af097688e4ef1637838c2befe1.woff) format("woff");
+  src: url(fonts/c383b1af097688e4ef1637838c2befe1.woff) format("woff")
 }
 
 ::-webkit-input-placeholder,
 body,
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 ::-moz-placeholder,
 body,
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 :-ms-input-placeholder,
 body,
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 body,
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 button,
 div,
 span {
-  outline: 0;
+  outline: 0
 }
 
 .nameTag-m8r81H {
@@ -312,7 +322,7 @@ span {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-height: 17px;
+  line-height: 17px
 }
 
 .headerText {
@@ -330,15 +340,15 @@ span {
   user-select: text;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center
 }
 
 .headerTagUsernameNoNickname-2_H881 {
-  color: #fff;
+  color: #fff
 }
 
 .headerTag-2pZJzA {
-  color: hsla(0, 0%, 100%, 0.6);
+  color: hsla(0, 0%, 100%, .6);
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   display: -webkit-box;
@@ -346,16 +356,12 @@ span {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center
 }
 
 .headerTagNoNickname-ENx6no {
   word-break: break-word;
-  white-space: normal;
-}
-
-.btn-1PnLxm.btnPrimary-1jluZW:hover:not(:disabled) {
-  background-color: #4e5d94;
+  white-space: normal
 }
 
 .icon {
@@ -363,20 +369,25 @@ span {
   background-clip: padding-box;
   background-color: transparent;
   background-position: 50%;
-  background-size: 100% 100%;
+  background-size: 100% 100%
 }
 
 .iconradius {
-  border-radius: 50%;
+  border-radius: 50%
 }
 
 .iconsize {
   width: 100px;
-  height: 100px;
+  height: 100px
 }
 
-.btn-15Au6M.btnPrimary-ggBniE:hover:not(:disabled) {
-  background-color: #4e5d94;
+.logo-2iEHEq {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 130px;
+  height: 36px;
+  background: url(media/discordlogo.svg) no-repeat
 }
 
 .authBox-hW6HRx {
@@ -385,19 +396,33 @@ span {
   font-size: 18px;
   color: #72767d;
   background: #36393f;
-  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
   border-radius: 5px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 .centerimage {
   width: 100%;
-  text-align: center;
+  text-align: center
 }
 
-@media (max-width: 485px) {
+.logo-2niOmb {
+  position: relative;
+  margin: 24px auto 0
+}
+
+@media (min-width:830px) {
+  .logo-2niOmb {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    margin: 0
+  }
+}
+
+@media (max-width:485px) {
   .authBox-hW6HRx {
     position: absolute;
     top: 0;
@@ -417,15 +442,9 @@ span {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: -webkit-gradient(
-      linear,
-      right top,
-      left bottom,
-      from(#3d4046),
-      to(#1e1e23)
-    );
+    background: -webkit-gradient(linear, right top, left bottom, from(#3d4046), to(#1e1e23));
     background: linear-gradient(to left bottom, #3d4046, #1e1e23);
-    border-radius: 0;
+    border-radius: 0
   }
 
   .authBox-hW6HRx:before {
@@ -434,8 +453,7 @@ span {
     top: 20px;
     height: 36px;
     width: 112px;
-    background: url(discordapp.com/assets/4f004ac9be168ac6ee18fc442a52ab53.svg)
-      no-repeat;
+    background: url(media/discordlogo.svg) no-repeat
   }
 }
 
@@ -447,24 +465,24 @@ span {
   -ms-flex-align: center;
   align-items: center;
   padding: 5px 16px 4px;
-  border-radius: 100px;
+  border-radius: 100px
 }
 
 .theme-dark .pill-1dHPfk {
-  background-color: rgba(32, 34, 37, 0.3);
+  background-color: rgba(32, 34, 37, .3)
 }
 
 .pillOnline-35Y-7N {
-  margin-right: 8px;
+  margin-right: 8px
 }
 
 .pillMessage-1btqlx {
   font-size: 16px;
-  white-space: nowrap;
+  white-space: nowrap
 }
 
 .theme-dark .pillMessage-1btqlx {
-  color: #b9bbbe;
+  color: #b9bbbe
 }
 
 .pillIcon-BaqtHs {
@@ -472,16 +490,16 @@ span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  margin-right: 4px;
+  margin-right: 4px
 }
 
 .pillIconOnline-2JGlqR {
-  background-color: #43b581;
+  background-color: #43b581
 }
 
 .button-3k0cO7 {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 24px
 }
 
 .colored {
@@ -495,13 +513,13 @@ span {
   -ms-flex-pack: center;
   justify-content: center;
   background-color: #7289da;
-  color: #fff;
+  color: #fff
 }
 
 .LargeIcon {
   margin-right: 0;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%
 }
 
 footer {
@@ -513,12 +531,13 @@ footer {
   bottom: 0;
   width: 100%;
   display: block;
-  text-align: center;
+  text-align: center
 }
 
 a:link {
-  text-decoration: none;
+  text-decoration: none
 }
+
 a:visited {
-  color: #00b0f4;
+  color: #00b0f4
 }
