@@ -284,41 +284,6 @@ button {
   src: url(fonts/746a4f241e03deffc59b08c5650cf458.woff) format("woff")
 }
 
-@font-face {
-  font-family: Ginto;
-  font-weight: 300;
-  font-style: italic;
-  src: url(fonts/26ec135289ee1c4e5439e30fa7d771b0.woff) format("woff")
-}
-
-@font-face {
-  font-family: Ginto;
-  font-weight: 400;
-  font-style: italic;
-  src: url(fonts/7a504226cbb79a1a6990a72266007030.woff) format("woff")
-}
-
-@font-face {
-  font-family: Ginto;
-  font-weight: 500;
-  font-style: italic;
-  src: url(fonts/7a504226cbb79a1a6990a72266007030.woff) format("woff")
-}
-
-@font-face {
-  font-family: Ginto;
-  font-weight: 600;
-  font-style: italic;
-  src: url(fonts/4ea3faef5f6c0c74eb4d5e1a4a5de0b4.woff) format("woff")
-}
-
-@font-face {
-  font-family: Ginto;
-  font-weight: 700;
-  font-style: italic;
-  src: url(fonts/09788e4fa057f2e0067e13209e56c8a7.woff) format("woff")
-}
-
 ::-webkit-input-placeholder,
 body,
 button {
