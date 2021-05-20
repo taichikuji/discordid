@@ -204,7 +204,7 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  background: url(media/background.jpg) no-repeat center center fixed;
+  background: url(media/background.webp) no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
