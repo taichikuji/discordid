@@ -21,7 +21,7 @@
   min-height: 780px;
   max-width: 1000px;
   max-height: 1000px;
-  background: url(media/background.png) 0 0/contain no-repeat;
+  background: url(media/fallback.png) 0 0/contain no-repeat;
   border: none;
   margin: 0;
   padding: 0;
@@ -32,19 +32,16 @@
 
 .middle {
   display: table-cell;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 .button-38aScr {
   position: relative;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -57,7 +54,6 @@
   padding: 2px 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none
 }
 
@@ -68,19 +64,19 @@
 
 .lookFilled-1Gx00P.colorBrand-3pXr91 {
   color: #fff;
-  background-color: #7289da
+  background-color: #5865f2
 }
 
 .lookFilled-1Gx00P.colorBrand-3pXr91:hover {
-  background-color: #677bc4
+  background-color: #5c6fb1
 }
 
 .lookFilled-1Gx00P.colorBrand-3pXr91:active {
-  background-color: #5b6eae
+  background-color: #4e5d94
 }
 
 .lookFilled-1Gx00P.colorBrand-3pXr91:disabled {
-  background-color: #7289da
+  background-color: #5865f2
 }
 
 .lookFilled-1Gx00P {
@@ -118,52 +114,38 @@ a:checked {
   color: #f0f8ff
 }
 
-@media (-ms-high-contrast:active),
-(-ms-high-contrast:none) {
-  .lookFilled-1Gx00P .contents-18-Yxp {
-    margin: 0
-  }
-}
-
 .flex-1O1GKY {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex
 }
 
 .alignCenter-1dQNNs {
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center
 }
 
 .alignStretch-DpGPf3 {
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch
 }
 
 .justifyStart-2NDFzi {
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start
 }
 
 .justifyCenter-3D2jYp {
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center
 }
 
 .noWrap-3jynv6 {
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap
 }
 
 .directionRow-3v3tfG {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row
 }
 
@@ -217,29 +199,27 @@ body {
   line-height: 1;
   margin: 0;
   padding: 0;
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Ginto, Helvetica Neue, Helvetica, Arial, sans-serif;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  background: #202225
+  background: url(media/background.webp) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
 }
 
 ::-webkit-input-placeholder {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: Ginto, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 ::-moz-placeholder {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
-}
-
-:-ms-input-placeholder {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: Ginto, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Ginto, Helvetica Neue, Helvetica, Arial, sans-serif;
   border: 0;
   cursor: pointer
 }
@@ -247,7 +227,7 @@ button {
 @font-face {
   font-family: Whitney;
   font-weight: 300;
-  src: url(fonts/375f5d0b0a54b53b92c351d7475eb152.woff) format("woff")
+  src: url(fonts/6c6374bad0b0b6d204d8d6dc4a18d820.woff) format("woff")
 }
 
 @font-face {
@@ -275,40 +255,50 @@ button {
 }
 
 @font-face {
-  font-family: SourceCodePro;
-  font-style: normal;
-  font-weight: 400;
-  src: url(fonts/375f5d0b0a54b53b92c351d7475eb152.woff) format("woff")
+  font-family: Ginto;
+  font-weight: 300;
+  src: url(fonts/148d0f25ba9c02a9190be23e882c7f87.woff) format("woff")
 }
 
 @font-face {
-  font-family: SourceCodePro;
-  font-style: normal;
+  font-family: Ginto;
+  font-weight: 400;
+  src: url(fonts/32c4f766e4892c054dfd367dbe0fc6dc.woff) format("woff")
+}
+
+@font-face {
+  font-family: Ginto;
+  font-weight: 500;
+  src: url(fonts/32c4f766e4892c054dfd367dbe0fc6dc.woff) format("woff")
+}
+
+@font-face {
+  font-family: Ginto;
   font-weight: 600;
-  src: url(fonts/c383b1af097688e4ef1637838c2befe1.woff) format("woff")
+  src: url(fonts/88055567e3d928bcb1e67e967081572e.woff) format("woff")
+}
+
+@font-face {
+  font-family: Ginto;
+  font-weight: 700;
+  src: url(fonts/746a4f241e03deffc59b08c5650cf458.woff) format("woff")
 }
 
 ::-webkit-input-placeholder,
 body,
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: Ginto, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 ::-moz-placeholder,
 body,
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
-}
-
-:-ms-input-placeholder,
-body,
-button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: Ginto, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 body,
 button {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: Ginto, Helvetica Neue, Helvetica, Arial, sans-serif
 }
 
 button,
@@ -327,19 +317,15 @@ span {
 
 .headerText {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
   -webkit-user-select: text;
   -moz-user-select: text;
-  -ms-user-select: text;
   user-select: text;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center
 }
 
@@ -349,13 +335,10 @@ span {
 
 .headerTag-2pZJzA {
   color: hsla(0, 0%, 100%, .6);
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center
 }
 
@@ -383,7 +366,6 @@ span {
 
 .logo-2iEHEq {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 130px;
   height: 36px;
@@ -434,13 +416,10 @@ span {
     height: 100%;
     min-height: 500px;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     background: -webkit-gradient(linear, right top, left bottom, from(#3d4046), to(#1e1e23));
     background: linear-gradient(to left bottom, #3d4046, #1e1e23);
@@ -459,10 +438,8 @@ span {
 
 .pill-1dHPfk {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 5px 16px 4px;
   border-radius: 100px
@@ -470,10 +447,6 @@ span {
 
 .theme-dark .pill-1dHPfk {
   background-color: rgba(32, 34, 37, .3)
-}
-
-.pillOnline-35Y-7N {
-  margin-right: 8px
 }
 
 .pillMessage-1btqlx {
@@ -504,15 +477,12 @@ span {
 
 .colored {
   display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  background-color: #7289da;
+  background-color: #5865f2;
   color: #fff
 }
 
