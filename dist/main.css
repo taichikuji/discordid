@@ -391,13 +391,15 @@ span {
 }
 
 .logo-2niOmb {
-  position: relative;
-  margin: 24px auto 0
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  margin-left: -65px;
+  margin-top: 0;
 }
 
 @media (min-width:830px) {
   .logo-2niOmb {
-    position: fixed;
     top: 24px;
     left: 24px;
     margin: 0
