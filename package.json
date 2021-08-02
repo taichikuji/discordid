@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/taichikuji/discordid#readme",
   "dependencies": {
-    "netlify-lambda": "^2.0.12"
+    "netlify-lambda": "^2.0.13"
   }
 }
