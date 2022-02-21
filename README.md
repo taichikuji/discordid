@@ -1,4 +1,4 @@
-# Discordid: A profile maker powered by Discord!
+# Discordid: Show off your Discord profile!
 
 <p align="center"><img src="media/logo.webp" width="150px" /><br/>
 <img src="https://img.shields.io/github/license/taichikuji/discordid?color=FF3351&logo=github" />

@@ -2,42 +2,47 @@
 <html lang="en-US">
 
 <head>
-	<meta name="viewport" content="width=device-width; height=device-height;" />
+	<meta name="viewport" content="width=device-width, height=device-height" />
 	<!-- meta info -->
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Template for a discord profile, made by Taichikuji!" />
+	<meta name="description" content="DiscordID's website, made by Taichikuji!" />
 	<meta name="viewport" content="user-scalable=no, width=device-width" />
 	<link rel="icon" href="media/logo.webp" />
 	<link rel="stylesheet" href="main.css" />
-	<title>My Profile!</title>
+	<title id="DiscTitle">DiscordID</title>
 	<!-- twitter meta info -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@taichikuji" />
-	<meta name="twitter:title" content="My Discord!" />
-	<meta name="twitter:description" content="Template for a discord profile, made by Taichikuji!" />
+	<meta name="twitter:title" content="DiscordID" />
+	<meta name="twitter:description" content="DiscordID's website, made by Taichikuji!" />
 	<meta name="twitter:creator" content="@taichikuji" />
 	<meta name="twitter:image" content="media/logo.webp" />
 	<!-- Here you can input whatever picture you want to properly show on twitter. by default it will display the profile picture to avoid any bugs. -->
 	<meta name="twitter:image:alt" content="This is displaying because somehow this image is missing." />
 	<!--discord meta info -->
-	<meta property="og:title" content="Template for a discord profile, made by Taichikuji!" />
+	<meta property="og:title" content="DiscordID" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://github.com/taichikuji/discordid/" />
 	<meta property="og:image" content="media/logo.webp" />
 	<!-- Once again, here you can input whatever picture you want to properly show on Discord. by default it will display the profile picture to avoid any bugs. -->
 	<meta property="og:description" content="This is displaying because somehow this image is missing." />
-	<!-- js -->
-	<script src="js/js.js"></script>
 </head>
 
-<body onload="getData()">
+<body>
 	<div class="outer">
 		<div class="middle">
 			<div><a href="/" target="_blank" rel="noopener" class="logo-2iEHEq logo-2niOmb"></a>
 				<div id="Square" class="inner authBox-hW6HRx theme-dark">
+					<noscript>
+						<p>This website requires JavaScript in order to work.</p>
+						<style>
+							.centerimage {
+								display: none;
+							}
+						</style>
+					</noscript>
 					<div class="centerimage">
-						<div id="UrlImage" class="icon LargeIcon colored margbot iconsize iconradius"
-							style="background-image: url('media/logo.webp');" role="button"></div>
+						<div id="UrlImage" class="icon LargeIcon colored margbot iconsize iconradius" role="button"></div>
 						<div class="headerText">
 							<div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignCenter-1dQNNs noWrap-3jynv6"
 								style="flex: 1 1 auto;">
@@ -57,9 +62,9 @@
 									class="pillMessage-1btqlx medium-zmzTW- size16-14cGz5 height20-mO2eIN">Available</span>
 							</div>
 						</div>
-						<button onclick="CopyAndGo()" type="button"
+						<button id="AddBtn" type="button"
 							class="marginTop40-i-78cZ button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN">
-							<div id="AccessButton" class="contents-18-Yxp"></div>
+							<div id="AccessBtn" class="contents-18-Yxp"></div>
 						</button>
 					</div>
 				</div>
@@ -71,5 +76,10 @@
 			</a>
 		</footer>
 </body>
-
+<!-- js -->
+<script src="js/js.js"></script>
+<script>
+	window.onload = getData;
+	document.getElementById("AddBtn").addEventListener("click",CopyAndGo);
+</script>
 </html>
