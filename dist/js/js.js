@@ -9,7 +9,13 @@ function CopyAndGo() {
     navigator.clipboard.writeText(TextArea.value); /* Copy to Clipboard using Clipbard API */
     TextArea.remove();
     let params = new URLSearchParams(location.search);
+
     window.location.href = 'discord://-/users/' + params.get('id');
+    setTimeout(() => {
+        if(document.hasFocus()) {
+            window.location.href = 'https://discord.com/users/' + params.get('id');
+        }
+    }, 300)
 }
 
 async function getData() {
