@@ -1,7 +1,7 @@
 async function getData() {
     let params = new URLSearchParams(location.search);
     if (!isNaN(params.get('id')) && parseInt(params.get('id'))) {
-        window.location.href = 'https://discord.com/users/' + params.get('id');
+        window.location.href = 'discord://-/users/' + params.get('id');
         const response = await fetch("./.netlify/functions/node-fetch?id=" + params.get('id')).then((resp) => resp.json());
         const data = response['msg'];
         document.getElementById("DiscTitle").innerHTML += " · " + data.username;
