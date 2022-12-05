@@ -180,7 +180,7 @@ body {
   line-height: 1;
   margin: 0;
   padding: 0;
-  font-family: "ABC Ginto Nord", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -192,28 +192,40 @@ body {
 }
 
 ::-webkit-input-placeholder {
-  font-family: "ABC Ginto Nord", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: var(--font-primary);
 }
 
 ::-moz-placeholder {
-  font-family: "ABC Ginto Nord", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: var(--font-primary);
 }
 
 button {
-  font-family: "ABC Ginto Nord", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-primary);
   border: 0;
   cursor: pointer
 }
 
 :root {
   --font-primary: "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --font-display: "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   --font-headline: "ABC Ginto Nord","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 @font-face {
   font-family: "gg sans";
-  src: url(fonts/ggsans.woff2) format("woff2")
+  font-weight: 400;
+  src: url(fonts/ggsans400.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: "gg sans";
+  font-weight: 500;
+  src: url(fonts/ggsans500.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: "gg sans";
+  font-weight: 600;
+  src: url(fonts/ggsans600.woff2) format("woff2")
 }
 
 @font-face {
@@ -234,18 +246,18 @@ button {
 ::-webkit-input-placeholder,
 body,
 button {
-  font-family: "ABC Ginto Nord", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: var(--font-primary);
 }
 
 ::-moz-placeholder,
 body,
 button {
-  font-family: "ABC Ginto Nord", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: var(--font-primary);
 }
 
 body,
 button {
-  font-family: "ABC Ginto Nord", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: var(--font-primary);
 }
 
 button,
@@ -323,6 +335,7 @@ span {
   width: 480px;
   padding: 40px;
   font-size: 18px;
+  font-weight: 500;
   color: #72767d;
   background: #36393f;
   -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
