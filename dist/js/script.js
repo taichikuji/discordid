@@ -25,13 +25,14 @@ function Redirect() {
 async function getData() {
     const params = new URLSearchParams(location.search);
     const userId = params.get("id");
-    // Get user data from api if userId is valid
+    // Get user data from the API if the userId is valid
     if (!isNaN(userId) && parseInt(userId)) {
         const response = await fetch("./.netlify/functions/node-fetch?id=" + userId).then((resp) => resp.json());
         const data = response["msg"];
         document.getElementById("DiscTitle").innerHTML += " · " + data.username;
         document.getElementById("UserId").innerHTML = data.username;
-        document.getElementById("NumberId").innerHTML = "#" + data.discriminator;
+        // Check if display_name is null, and update NumberId accordingly
+        document.getElementById("NumberId").innerHTML = data.display_name === null ? ("#" + data.discriminator) : "";
         document.getElementById("AccessBtn").innerHTML = "Add " + data.username;
         document.getElementById("UrlImage").style = "background-image: url(https://cdn.discordapp.com/avatars/" + data.id + "/" + data.avatar + ".webp);";
     } else {
@@ -39,6 +40,7 @@ async function getData() {
             "<p>Hello! I'm Taichi.<br/>You're visiting the site without an ID, please visit the wiki for more info <a href='https://github.com/taichikuji/discordid/wiki'>「here」</a></p>";
     }
 }
+
 
 function isMobileDevice() {
     // Check in client hints if device is mobile
