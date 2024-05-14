@@ -3,7 +3,7 @@
 <p align="center"><img src="media/logo.webp" width="150px" /><br/>
 <img src="https://img.shields.io/github/license/taichikuji/discordid?color=FF3351&logo=github" />
 <img src="https://img.shields.io/github/commit-activity/w/taichikuji/discordid?label=commits&logo=github" />
-<img src="https://img.shields.io/website?url=https%3A%2F%2Fdiscordid.netlify.app&logo=netlify" />
+<img src="https://api.netlify.com/api/v1/badges/cc02749a-5b20-4e02-9b61-bee31ee565cd/deploy-status" />
 </p>
 
 ## Why Netlify?
