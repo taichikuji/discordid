@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/taichikuji/discordid#readme",
   "dependencies": {
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^3.3.2"
   }
 }
