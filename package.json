@@ -2,10 +2,8 @@
   "name": "discordid",
   "version": "1.0.1",
   "description": "A profile maker powered by Discord!",
-  "main": "js/js.js",
-  "scripts": {
-    "postinstall": "netlify-lambda install"
-  },
+  "main": "discordid.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taichikuji/discordid.git"
@@ -18,6 +16,6 @@
   },
   "homepage": "https://github.com/taichikuji/discordid#readme",
   "dependencies": {
-    "netlify-lambda": "^2.0.16"
+    "node-fetch": "^3.3.2"
   }
 }

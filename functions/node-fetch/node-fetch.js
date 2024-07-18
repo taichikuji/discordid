@@ -1,5 +1,5 @@
 /* eslint-disable */
-const fetch = require("node-fetch");
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 exports.handler = async function (event, context) {
   try {
     const response = await fetch("https://discordapp.com/api/users/" + event.queryStringParameters.id, {
