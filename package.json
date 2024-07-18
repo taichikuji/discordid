@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/taichikuji/discordid/issues"
   },
-  "homepage": "https://github.com/taichikuji/discordid#readme"
+  "homepage": "https://github.com/taichikuji/discordid#readme",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
 }
