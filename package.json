@@ -1,6 +1,6 @@
 {
   "name": "discordid",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A profile maker powered by Discord!",
   "main": "discordid.js",
   "scripts": {},
