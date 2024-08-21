@@ -27,7 +27,7 @@ async function getData() {
     const userId = params.get("id");
     // Get user data from the API if the userId is valid
     if (!isNaN(userId) && parseInt(userId)) {
-        const response = await fetch("./.netlify/functions/node-fetch?id=" + userId).then((resp) => resp.json());
+        const response = await fetch("./.netlify/functions/fetch?id=" + userId).then((resp) => resp.json());
         const data = response["msg"];
         document.getElementById("DiscTitle").innerHTML += " · " + data.username;
         document.getElementById("UserId").innerHTML = data.username;
