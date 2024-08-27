@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", getData);
+document.getElementById("AddBtn").addEventListener("click", Redirect);
+
+async function getData() {
+    const params = new URLSearchParams(location.search);
+    const userId = params.get("id");
+    try {
+        const response = await fetch("./.netlify/functions/fetch?id=" + userId).then((resp) => resp.json());
+        const data = response["msg"];
+        document.getElementById("UrlImage").style = "background-image: url(https://cdn.discordapp.com/avatars/" + data.id + "/" + data.avatar + ".webp);";
+        document.getElementById("UserId").innerHTML = data.username;
+        document.getElementById("NumberId").innerHTML = data.display_name === null ? ("#" + data.discriminator) : "";
+        document.getElementById("AccessBtn").innerHTML = "Add " + data.username;
+        document.getElementById("DiscTitle").innerHTML += " · " + data.username;
+    } catch {
+        document.getElementById("Square").innerHTML =
+            `<span>It seems like there was an issue loading.<br/>Please visit the wiki for more information <a href='https://github.com/taichikuji/discordid/wiki'>「here」</a></span>`;
+    }
+}
+
 function Redirect() {
     const params = new URLSearchParams(location.search);
     const userId = params.get("id");
@@ -22,26 +42,6 @@ function Redirect() {
     }
 }
 
-async function getData() {
-    const params = new URLSearchParams(location.search);
-    const userId = params.get("id");
-    // Get user data from the API if the userId is valid
-    if (!isNaN(userId) && parseInt(userId)) {
-        const response = await fetch("./.netlify/functions/fetch?id=" + userId).then((resp) => resp.json());
-        const data = response["msg"];
-        document.getElementById("DiscTitle").innerHTML += " · " + data.username;
-        document.getElementById("UserId").innerHTML = data.username;
-        // Check if display_name is null, and update NumberId accordingly
-        document.getElementById("NumberId").innerHTML = data.display_name === null ? ("#" + data.discriminator) : "";
-        document.getElementById("AccessBtn").innerHTML = "Add " + data.username;
-        document.getElementById("UrlImage").style = "background-image: url(https://cdn.discordapp.com/avatars/" + data.id + "/" + data.avatar + ".webp);";
-    } else {
-        document.getElementById("Square").innerHTML =
-            "<span>Hello! I'm Taichi.<br/>You're visiting the site without an ID, please visit the wiki for more info <a href='https://github.com/taichikuji/discordid/wiki'>「here」</a></span>";
-    }
-}
-
-
 function isMobileDevice() {
     // Check in client hints if device is mobile
     if (window.navigator.userAgentData) {
@@ -53,6 +53,3 @@ function isMobileDevice() {
     }
     return false;
 }
-
-window.onload = getData;
-document.getElementById("AddBtn").addEventListener("click", Redirect);
