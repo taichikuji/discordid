@@ -206,26 +206,26 @@ button {
 }
 
 :root {
-  --font-primary: "gg sans","Noto Sans",Helvetica,Arial,sans-serif;
-  --font-headline: "gg sans","Noto Sans",Helvetica,Arial,sans-serif
+  --font-primary: "Whitney","Noto Sans",Helvetica,Arial,sans-serif;
+  --font-headline: "Whitney","Noto Sans",Helvetica,Arial,sans-serif
 }
 
 @font-face {
-  font-family: "gg sans";
+  font-family: "Whitney";
   font-weight: 400;
-  src: url(fonts/ggsans400.woff2) format("woff2")
+  src: url(fonts/whitney400.woff) format("woff2")
 }
 
 @font-face {
-  font-family: "gg sans";
+  font-family: "Whitney";
   font-weight: 500;
-  src: url(fonts/ggsans500.woff2) format("woff2")
+  src: url(fonts/whitney500.woff) format("woff")
 }
 
 @font-face {
-  font-family: "gg sans";
+  font-family: "Whitney";
   font-weight: 600;
-  src: url(fonts/ggsans600.woff2) format("woff2")
+  src: url(fonts/whitney600.woff) format("woff")
 }
 
 @font-face {
@@ -318,7 +318,7 @@ span {
   flex: 0 0 auto;
   width: 130px;
   height: 36px;
-  background: url(media/discordlogo.svg) no-repeat
+  background: url(media/d-b-32.svg) no-repeat
 }
 
 .authBox-hW6HRx {
@@ -366,7 +366,6 @@ span {
     padding: 70px 40px 40px;
     width: 100%;
     height: 100%;
-    min-height: 500px;
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
@@ -384,7 +383,8 @@ span {
     top: 20px;
     height: 36px;
     width: 112px;
-    background: url(media/discordlogo.svg) no-repeat
+    background: url(media/d-b-32.svg) no-repeat;
+    filter: invert(1);
   }
 }
 
