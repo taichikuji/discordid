@@ -185,7 +185,7 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  background: url(media/background.svg) no-repeat center center fixed;
+  background: #1e1e23 url(media/background.svg) no-repeat fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -314,11 +314,11 @@ span {
 }
 
 .logo-2iEHEq {
-  -webkit-box-flex: 0;
   flex: 0 0 auto;
-  width: 130px;
+  width: 36px;
   height: 36px;
-  background: url(media/d-b-32.svg) no-repeat
+  background: url(media/d-b.svg) no-repeat;
+  background-size: contain;
 }
 
 .authBox-hW6HRx {
@@ -344,14 +344,14 @@ span {
   position: fixed;
   top: 24px;
   left: 50%;
-  margin-left: -65px;
-  margin-top: 0
+  transform: translateX(-50%);
 }
 
 @media (min-width:830px) {
   .logo-2niOmb {
     top: 53px;
     left: 48px;
+    transform: none;
     margin: 0
   }
 }
@@ -366,6 +366,7 @@ span {
     padding: 70px 40px 40px;
     width: 100%;
     height: 100%;
+    min-height: 500px;
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
@@ -374,16 +375,17 @@ span {
     align-items: center;
     background: -webkit-gradient(linear, right top, left bottom, from(#3d4046), to(#1e1e23));
     background: linear-gradient(to left bottom, #3d4046, #1e1e23);
-    border-radius: 0
+    border-radius: 0;
   }
 
   .authBox-hW6HRx:before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 24px;
     height: 36px;
-    width: 112px;
-    background: url(media/d-b-32.svg) no-repeat;
+    width: 36px;
+    background: url(media/d-b.svg) no-repeat;
+    background-size: contain;
     filter: invert(1);
   }
 }
