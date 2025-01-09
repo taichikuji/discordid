@@ -19,11 +19,9 @@ There's a quick introduction on how to work with **Discordid** on the **[wiki!](
 
 ## What is this project exactly?
 
-This project is a website hosted on Netlify to show off your Discord profile anywhere you want! It'll show your profile picture and your user in a simple but neat way!
+This project is a website hosted on Netlify to show off your Discord profile anywhere you want!
 
-This was initially a template of an Introduction site I made myself with Discord in mind.
-
-It uses similar css assets from the site!
+It'll show your profile picture and your user in a simple but neat way!
 
 ![This is how the site looks!](media/preview.webp)
 
