@@ -206,26 +206,14 @@ button {
 }
 
 :root {
-  --font-primary: "Whitney","Noto Sans",Helvetica,Arial,sans-serif;
-  --font-headline: "Whitney","Noto Sans",Helvetica,Arial,sans-serif
+  --font-primary: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif;
+  --font-headline: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif
 }
 
 @font-face {
-  font-family: "Whitney";
-  font-weight: 400;
-  src: url(fonts/whitney400.woff) format("woff2")
-}
-
-@font-face {
-  font-family: "Whitney";
-  font-weight: 500;
-  src: url(fonts/whitney500.woff) format("woff")
-}
-
-@font-face {
-  font-family: "Whitney";
-  font-weight: 600;
-  src: url(fonts/whitney600.woff) format("woff")
+  font-family: "Open Sans";
+  font-weight: 400 600;
+  src: url(fonts/opensans.woff2) format("woff2")
 }
 
 @font-face {
