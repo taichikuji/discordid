@@ -212,8 +212,23 @@ button {
 
 @font-face {
   font-family: "Open Sans";
-  font-weight: 400 600;
-  src: url(fonts/opensans.woff2) format("woff2")
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/opensans400.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/opensans500.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/opensans600.woff2) format("woff2");
 }
 
 @font-face {
