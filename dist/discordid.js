@@ -1,3 +1,5 @@
+import DOMPurify from 'dompurify';
+
 const el = {
     img: document.getElementById("UrlImage"),
     uid: document.getElementById("UserId"),
@@ -14,7 +16,7 @@ let udata = null;
 function displayError(msg) {
     console.error("Error:", msg);
     if (el.sq) {
-        el.sq.innerHTML = `<span class="error-message">${msg}</span>`;
+        el.sq.innerHTML = `<span class="error-message">${DOMPurify.sanitize(msg)}</span>`;
         el.sq.classList.add('error-state');
     } else {
         alert("An error occurred. " + msg.replace(/<br\/?>/g, '\n').replace(/<a.*?>(.*?)<\/a>/g, '$1'));
