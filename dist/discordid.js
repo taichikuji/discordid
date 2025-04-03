@@ -71,10 +71,10 @@ async function handleAddClick() {
 
     try {
         await navigator.clipboard.writeText(fullUser);
-        const originalButtonText = elements.accessBtnText.textContent;
-        elements.accessBtnText.textContent = 'Copied!';
+        const originalButtonText = el.btnTxt.textContent;
+        el.btnTxt.textContent = 'Copied!';
         setTimeout(() => {
-            elements.accessBtnText.textContent = originalButtonText;
+            el.btnTxt.textContent = originalButtonText;
         }, 1500);
     } catch (err) {
         console.error("Failed to copy text: ", err);
