@@ -1,5 +1,6 @@
-const fetch = (...args) => import('node-fetch-cache').then(({default: fetch}) => fetch(...args));
-exports.handler = async function (event, context) {
+import fetch from 'node-fetch-cache';
+
+export async function handler(event, context) {
   try {
     const response = await fetch("https://discordapp.com/api/users/" + event.queryStringParameters.id, {
       headers: {
@@ -30,4 +31,4 @@ exports.handler = async function (event, context) {
       })
     };
   }
-};
+}
