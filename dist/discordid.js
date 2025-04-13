@@ -1,107 +1,130 @@
 const el = {
-    img: document.getElementById("UrlImage"),
-    uid: document.getElementById("UserId"),
-    num: document.getElementById("NumberId"),
-    add: document.getElementById("AddBtn"),
-    btnTxt: document.getElementById("AccessBtn"),
-    title: document.getElementById("DiscTitle"),
-    sq: document.getElementById("Square"),
+  img: document.getElementById("UrlImage"),
+  uid: document.getElementById("UserId"),
+  num: document.getElementById("NumberId"),
+  add: document.getElementById("AddBtn"),
+  btnTxt: document.getElementById("AccessBtn"),
+  title: document.getElementById("DiscTitle"),
+  sq: document.getElementById("Square")
 };
 
-let userId = null;
-let userData = null;
+let userId = null, userData = null, currentRequest = null;
 
 function updateUI(data) {
-    if (!data) return;
-    if (el.img) {
-        el.img.style.backgroundImage = `url(https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.webp)`;
-        el.img.style.backgroundColor = '#5865F2';
-    }
-    if (el.uid) el.uid.textContent = data.username || 'Unknown User';
-    if (el.num) {
-        const d = data.discriminator;
-        el.num.textContent = (d && d !== "0") ? `#${d}` : "";
-    }
-    if (el.btnTxt) el.btnTxt.textContent = `Add ${data.username || 'User'}`;
-    if (el.title) el.title.textContent = el.title.textContent.split('·')[0] + (data.username ? ` · ${data.username}` : '');
+  if (!data) return;
+  
+  if (el.img && data.id && data.avatar)
+    el.img.style = `background-image:url(https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.webp);background-color:#5865F2`;
+  
+  const displayName = data.username || data.global_name || 'Unknown User';
+  if (el.uid) el.uid.textContent = displayName;
+  if (el.num) el.num.textContent = (data.discriminator && data.discriminator !== "0") ? `#${data.discriminator}` : "";
+  if (el.btnTxt) el.btnTxt.textContent = `Add ${displayName}`;
+  
+  if (el.title) {
+    const baseTitle = el.title.textContent.split('·')[0].trim();
+    el.title.textContent = displayName ? `${baseTitle} · ${displayName}` : baseTitle;
+  }
 }
 
 function displayError(msg) {
-    console.error("Error:", msg);
-    if (el.sq) {
-        el.sq.innerHTML = `Error: ${msg}`;
-        el.sq.classList.add('error-state');
-    } else {
-        alert(`Error: ${msg}`);
-    }
+  console.error("Error:", msg);
+  if (!el.sq) return alert(`Error: ${msg}`);
+  
+  el.sq.textContent = `Error: ${msg}`;
+  el.sq.classList.add('error-state');
+  
+  if (msg.includes('@discordid/wiki')) {
+    const span = document.createElement('span');
+    span.textContent = ' Visit ';
+    
+    const link = document.createElement('a');
+    link.textContent = '@discordid/wiki';
+    link.href = 'https://github.com/taichikuji/discordid/wiki';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    
+    span.appendChild(link);
+    el.sq.appendChild(span);
+  }
 }
 
-async function fetchUserData(userId) {
-    try {
-        const apiURL = `./.netlify/functions/fetch?id=${encodeURIComponent(userId)}`;
-        const response = await fetch(apiURL);
-        if (!response.ok) {
-            let errMsg = `API Error: ${response.status}`;
-            try { errMsg = (await response.json()).msg || errMsg; } catch (_) {}
-            throw new Error(errMsg);
-        }
-        const result = await response.json();
-        if (!result || !result.msg) throw new Error("Invalid API response structure.");
-        userData = result.msg;
-        updateUI(userData);
-    } catch (error) {
-        displayError(`Failed to load data for ID ${userId} - (${error.message})<br/>Visit <a href="https://github.com/taichikuji/discordid/wiki" target="_blank" rel="noopener noreferrer">@discordid/wiki</a>`);
+async function fetchUserData(id) {
+  if (currentRequest) currentRequest.abort();
+  
+  const controller = new AbortController();
+  currentRequest = controller;
+  
+  try {
+    if (!id) throw new Error("No user ID provided");
+    if (!/^\d+$/.test(id) || id.length < 17 || id.length > 20)
+      throw new Error("Invalid Discord ID format");
+      
+    const timestamp = Number(BigInt(id) >> 22n) + 1420070400000;
+    if (new Date(timestamp) < new Date('2015-01-01') || new Date(timestamp) > new Date())
+      throw new Error("Invalid Discord ID timestamp");
+    
+    const res = await fetch(`./.netlify/functions/fetch?id=${id}`, {
+      signal: controller.signal,
+      headers: {Accept: 'application/json'}
+    });
+    
+    if (!res.ok) {
+      const errMsg = res.status ? `API Error: ${res.status}` : 'API Error';
+      try {
+        const errData = await res.json();
+        throw new Error(errData.msg || errMsg);
+      } catch (e) {
+        throw new Error(e.message || errMsg);
+      }
     }
+    
+    const result = await res.json();
+    if (!result?.msg) throw new Error("Invalid API response");
+    
+    userData = result.msg;
+    updateUI(userData);
+  } catch (err) {
+    if (err.name !== 'AbortError')
+      displayError(`Failed to load data for ID ${id} - (${err.message}) @discordid/wiki`);
+  } finally {
+    if (currentRequest === controller) currentRequest = null;
+  }
 }
 
-function isMobile() {
-    if (navigator.userAgentData) {
-        return navigator.userAgentData.mobile;
-    }
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
+const isMobile = () => navigator.userAgentData?.mobile || 
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent || '');
 
 async function handleAddClick() {
-    if (!userId || !userData) {
-        console.error("Missing ID or data for redirect.");
-        alert("User info missing. Please refresh.");
-        return;
+  if (!userId || !userData) return alert("User info missing. Please refresh.");
+
+  const username = userData.username || userData.global_name || '';
+  const fullUser = `${username}${(userData.discriminator && userData.discriminator !== "0") ? `#${userData.discriminator}` : ""}`;
+
+  try {
+    await navigator.clipboard.writeText(fullUser);
+    if (el.btnTxt) {
+      const origText = el.btnTxt.textContent;
+      el.btnTxt.textContent = 'Copied!';
+      setTimeout(() => el.btnTxt.textContent = origText, 1500);
     }
+  } catch (err) {
+    if (!isMobile()) console.error("Clipboard error:", err);
+  }
 
-    const username = userData.username || '';
-    const discrim = userData.discriminator;
-    const fullUser = `${username}${(discrim && discrim !== "0") ? `#${discrim}` : ""}`;
-
-    try {
-        await navigator.clipboard.writeText(fullUser);
-        const originalButtonText = el.btnTxt.textContent;
-        el.btnTxt.textContent = 'Copied!';
-        setTimeout(() => {
-            el.btnTxt.textContent = originalButtonText;
-        }, 1500);
-    } catch (err) {
-        console.error("Failed to copy text: ", err);
-        alert("Could not copy username to clipboard.");
-    }
-
-    const webUrl = `https://discord.com/users/${userId}`;
-    const appUrl = `discord://-/users/${userId}`;
-
-    if (isMobile()) {
-        window.location.href = webUrl;
-    } else {
-        window.location.href = appUrl;
-        setTimeout(() => {
-            if (document.hasFocus()) {
-                window.location.href = webUrl;
-            }
-        }, 500);
-    }
+  window.location.href = isMobile() 
+    ? `https://discord.com/users/${userId}`
+    : `discord://-/users/${userId}`;
+    
+  if (!isMobile()) {
+    setTimeout(() => {
+      if (document.hasFocus()) window.location.href = `https://discord.com/users/${userId}`;
+    }, 500);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    userId = params.get("id");
-    userId ? fetchUserData(userId) : displayError("No user ID provided in URL.");
-    el.add?.addEventListener("click", handleAddClick);
+  userId = new URLSearchParams(window.location.search).get("id");
+  userId ? fetchUserData(userId) : displayError("No user ID provided in URL");
+  el.add?.addEventListener("click", handleAddClick);
 });

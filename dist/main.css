@@ -1,171 +1,16 @@
-.inner {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative
+/* Base reset and settings */
+:root {
+  --font-primary: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif;
+  --font-headline: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif;
+  --discord-blue: #5865f2;
+  --discord-blue-hover: #5c6fb1;
+  --discord-blue-active: #4e5d94;
+  --text-normal: #fff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --background: #36393f;
 }
 
-.outer {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%
-}
-
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.button-38aScr {
-  position: relative;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background: 0;
-  border: 0;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  padding: 2px 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none
-}
-
-.button-38aScr:disabled {
-  cursor: not-allowed;
-  opacity: .5
-}
-
-.lookFilled-1Gx00P.colorBrand-3pXr91 {
-  color: #fff;
-  background-color: #5865f2
-}
-
-.lookFilled-1Gx00P.colorBrand-3pXr91:hover {
-  background-color: #5c6fb1
-}
-
-.lookFilled-1Gx00P.colorBrand-3pXr91:active {
-  background-color: #4e5d94
-}
-
-.lookFilled-1Gx00P.colorBrand-3pXr91:disabled {
-  background-color: #5865f2
-}
-
-.lookFilled-1Gx00P {
-  -webkit-transition: background-color .17s ease, color .17s ease;
-  transition: background-color .17s ease, color .17s ease
-}
-
-.sizeLarge-1vSeWK {
-  width: 130px;
-  height: 44px;
-  min-width: 130px;
-  min-height: 44px
-}
-
-.grow-q77ONN {
-  width: auto
-}
-
-.fullWidth-1orjjo {
-  width: 100%
-}
-
-.lookFilled-1Gx00P .contents-18-Yxp {
-  margin: 0 auto;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden
-}
-
-a {
-  text-decoration: none
-}
-
-a:checked {
-  color: #f0f8ff
-}
-
-.flex-1O1GKY {
-  display: -webkit-box;
-  display: flex
-}
-
-.alignCenter-1dQNNs {
-  -webkit-box-align: center;
-  align-items: center
-}
-
-.alignStretch-DpGPf3 {
-  -webkit-box-align: stretch;
-  align-items: stretch
-}
-
-.justifyStart-2NDFzi {
-  -webkit-box-pack: start;
-  justify-content: flex-start
-}
-
-.justifyCenter-3D2jYp {
-  -webkit-box-pack: center;
-  justify-content: center
-}
-
-.noWrap-3jynv6 {
-  flex-wrap: nowrap
-}
-
-.directionRow-3v3tfG {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row
-}
-
-.weightNormal-WI4TcG {
-  font-weight: 400
-}
-
-.weightSemiBold-NJexzi {
-  font-weight: 600
-}
-
-.size14-3iUx6q {
-  font-size: 14px
-}
-
-.size16-14cGz5 {
-  font-size: 16px
-}
-
-.height20-mO2eIN {
-  line-height: 20px
-}
-
-.marginTop8-1DLZ1n {
-  margin-top: 8px
-}
-
-.margbot {
-  margin-bottom: 20px
-}
-
-.marginTop40-i-78cZ {
-  margin-top: 40px
-}
-
-body,
-div,
-html,
-span {
+body, div, html, span {
   margin: 0;
   padding: 0;
   border: 0;
@@ -173,43 +18,33 @@ span {
   font-style: inherit;
   font-family: inherit;
   font-size: 100%;
-  vertical-align: baseline
+  vertical-align: baseline;
 }
 
 body {
   line-height: 1;
-  margin: 0;
-  padding: 0;
   font-family: var(--font-primary);
   overflow: hidden;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
   background: #1e1e23 url(media/background.svg) no-repeat fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
 }
 
-::-webkit-input-placeholder {
-  font-family: var(--font-primary);
-}
-
-::-moz-placeholder {
-  font-family: var(--font-primary);
+button, div, span {
+  outline: 0;
 }
 
 button {
   font-family: var(--font-primary);
   border: 0;
-  cursor: pointer
+  cursor: pointer;
 }
 
-:root {
-  --font-primary: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif;
-  --font-headline: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif
-}
-
+/* Font settings */
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
@@ -233,90 +68,247 @@ button {
 
 @font-face {
   font-family: "Noto Sans";
-  src: url(fonts/notosans.woff2) format("woff2")
+  src: url(fonts/notosans.woff2) format("woff2");
 }
 
-::-webkit-input-placeholder,
-body,
-button {
-  font-family: var(--font-primary);
+/* Layout classes - preserved as requested */
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
-::-moz-placeholder,
-body,
-button {
-  font-family: var(--font-primary);
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-body,
-button {
-  font-family: var(--font-primary);
+.middle {
+  display: table-cell;
+  vertical-align: middle;
 }
 
-button,
-div,
-span {
-  outline: 0
+/* Flex utilities with more semantic names */
+.flex-container {
+  display: flex;
 }
 
-.nameTag-m8r81H {
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.direction-row {
+  flex-direction: row;
+}
+
+/* Typography with more semantic names */
+.weight-normal {
+  font-weight: 400;
+}
+
+.weight-semibold {
+  font-weight: 600;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.line-height-20 {
+  line-height: 20px;
+}
+
+/* Margin utilities with more semantic names */
+.margin-top-8 {
+  margin-top: 8px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+/* Button styles with more semantic names */
+.button-base {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: 0;
+  border: 0;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 2px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.button-base:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.button-filled {
+  transition: background-color .17s ease, color .17s ease;
+}
+
+.button-filled.button-primary {
+  color: #fff;
+  background-color: var(--discord-blue);
+}
+
+.button-filled.button-primary:hover {
+  background-color: var(--discord-blue-hover);
+}
+
+.button-filled.button-primary:active {
+  background-color: var(--discord-blue-active);
+}
+
+.button-filled.button-primary:disabled {
+  background-color: var(--discord-blue);
+}
+
+.button-large {
+  width: 130px;
+  height: 44px;
+  min-width: 130px;
+  min-height: 44px;
+}
+
+.button-auto-width {
+  width: auto;
+}
+
+.button-full-width {
+  width: 100%;
+}
+
+.button-filled .button-content {
+  margin: 0 auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Discord profile styling with more semantic names */
+.name-tag {
   vertical-align: middle;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-height: 17px
+  line-height: 17px;
 }
 
-.headerText {
-  display: -webkit-box;
+.header-text {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
   text-align: center;
+  user-select: text;
   -webkit-user-select: text;
   -moz-user-select: text;
-  user-select: text;
-  -webkit-box-align: center;
-  align-items: center
+  align-items: center;
 }
 
-.headerTagUsernameNoNickname-2_H881 {
-  color: #fff
+.username-text {
+  color: var(--text-normal);
 }
 
-.headerTag-2pZJzA {
-  color: hsla(0, 0%, 100%, .6);
+.tag-container {
+  color: var(--text-muted);
   flex-wrap: wrap;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-  justify-content: center
+  justify-content: center;
 }
 
-.headerTagNoNickname-ENx6no {
+.tag-no-nickname {
   word-break: break-word;
-  white-space: normal
+  white-space: normal;
 }
 
-.icon {
+/* Avatar styling with more semantic names */
+.avatar {
   position: relative;
   background-clip: padding-box;
   background-color: transparent;
   background-position: 50%;
-  background-size: 100% 100%
+  background-size: 100% 100%;
 }
 
-.iconradius {
-  border-radius: 50%
+.avatar-circle {
+  border-radius: 50%;
 }
 
-.iconsize {
+.avatar-large {
   width: 100px;
-  height: 100px
+  height: 100px;
 }
 
-.logo-2iEHEq {
+.avatar-colored {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--discord-blue);
+  color: #fff;
+}
+
+.avatar-full {
+  margin-right: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* Auth box styling with more semantic names */
+.profile-card {
+  width: 480px;
+  padding: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #72767d;
+  background: var(--background);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.profile-content {
+  width: 100%;
+  text-align: center;
+}
+
+/* Logo and branding with more semantic names */
+.discord-logo {
   flex: 0 0 auto;
   width: 36px;
   height: 36px;
@@ -324,43 +316,79 @@ span {
   background-size: contain;
 }
 
-.authBox-hW6HRx {
-  width: 480px;
-  padding: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #72767d;
-  background: #36393f;
-  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
-  border-radius: 5px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box
-}
-
-.centerimage {
-  width: 100%;
-  text-align: center
-}
-
-.logo-2niOmb {
+.logo-header {
   position: fixed;
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-@media (min-width:830px) {
-  .logo-2niOmb {
+/* Status pill indicators with more semantic names */
+.status-pill {
+  display: flex;
+  align-items: center;
+  padding: 5px 16px 4px;
+  border-radius: 100px;
+}
+
+.theme-dark .status-pill {
+  background-color: rgba(32, 34, 37, .3);
+}
+
+.status-text {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.theme-dark .status-text {
+  color: #b9bbbe;
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.status-online {
+  background-color: #43b581;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00b0f4;
+}
+
+/* Footer */
+footer {
+  margin: 14px;
+  font-size: 12px;
+  padding-top: 24px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Media queries */
+@media (min-width: 830px) {
+  .logo-header {
     top: 53px;
     left: 48px;
     transform: none;
-    margin: 0
+    margin: 0;
   }
 }
 
-@media (max-width:485px) {
-  .authBox-hW6HRx {
+@media (max-width: 485px) {
+  .profile-card {
     position: absolute;
     top: 0;
     right: 0;
@@ -370,18 +398,14 @@ span {
     width: 100%;
     height: 100%;
     min-height: 500px;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
-    background: -webkit-gradient(linear, right top, left bottom, from(#3d4046), to(#1e1e23));
     background: linear-gradient(to left bottom, #3d4046, #1e1e23);
     border-radius: 0;
   }
 
-  .authBox-hW6HRx:before {
+  .profile-card:before {
     content: "";
     position: absolute;
     top: 24px;
@@ -393,78 +417,8 @@ span {
   }
 }
 
-.pill-1dHPfk {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  padding: 5px 16px 4px;
-  border-radius: 100px
-}
-
-.theme-dark .pill-1dHPfk {
-  background-color: rgba(32, 34, 37, .3)
-}
-
-.pillMessage-1btqlx {
+/* Button-specific styles */
+.button-sizing {
   font-size: 16px;
-  white-space: nowrap
-}
-
-.theme-dark .pillMessage-1btqlx {
-  color: #b9bbbe
-}
-
-.pillIcon-BaqtHs {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 4px
-}
-
-.pillIconOnline-2JGlqR {
-  background-color: #43b581
-}
-
-.button-3k0cO7 {
-  font-size: 16px;
-  line-height: 24px
-}
-
-.colored {
-  display: -webkit-inline-box;
-  display: inline-flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: #5865f2;
-  color: #fff
-}
-
-.LargeIcon {
-  margin-right: 0;
-  background-repeat: no-repeat;
-  background-size: 100%
-}
-
-footer {
-  margin: 14px;
-  font-size: 12px;
-  padding-top: 24px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  display: block;
-  text-align: center
-}
-
-a:link {
-  text-decoration: none
-}
-
-a:visited {
-  color: #00b0f4
+  line-height: 24px;
 }

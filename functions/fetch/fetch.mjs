@@ -1,38 +1,42 @@
-import { default as fetch } from 'node-fetch-cache';
+import fetch from 'node-fetch';
 
-const handler = async function(event, context) {
-    try {
-        const response = await fetch(`https://discordapp.com/api/users/${event.queryStringParameters.id}`, {
-            headers: {
-                Accept: "application/json",
-                Authorization: `Bot ${process.env.DISCORD_API_KEY}`
-            }
-        });
+export default async req => {
+  const userId = new URL(req.url).searchParams.get('id');
+  
+  if (!userId || !/^\d+$/.test(userId)) 
+    return new Response(JSON.stringify({ 
+      msg: userId ? "Invalid user ID format" : "Missing required 'id' parameter" 
+    }), { status: 400, headers: { 'Content-Type': 'application/json' } });
+  
+  try {
+    const res = await fetch(`https://discordapp.com/api/users/${userId}`, {
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bot ${process.env.DISCORD_API_KEY}`,
+        'User-Agent': 'DiscordID/2.0.1 (https://github.com/taichikuji/discordid)'
+      }
+    });
 
-        if (!response.ok) {
-            return {
-                statusCode: response.status,
-                body: response.statusText
-            };
-        }
-
-        const data = await response.json();
-
-        return {
-            statusCode: 200,
-            body: JSON.stringify({
-                msg: data
-            })
-        };
-    } catch (err) {
-        console.log(err);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({
-                msg: err.message
-            })
-        };
-    }
-};
-
-export { handler };
+    if (!res.ok) 
+      return new Response(JSON.stringify({ 
+        msg: res.statusText || `API returned ${res.status}` 
+      }), { status: res.status, headers: { 'Content-Type': 'application/json' } });
+    
+    const { id, username, discriminator, avatar, global_name } = await res.json();
+    
+    return new Response(JSON.stringify({ 
+      msg: { id, username, discriminator, avatar, global_name } 
+    }), { 
+      status: 200, 
+      headers: { 
+        'Cache-Control': 'public, max-age=3600', 
+        'Content-Type': 'application/json' 
+      }
+    });
+  } catch (err) {
+    console.error("Discord API Error:", err);
+    return new Response(JSON.stringify({ 
+      msg: "Internal server error occurred while fetching user data" 
+    }), { status: 500, headers: { 'Content-Type': 'application/json' } });
+  }
+}

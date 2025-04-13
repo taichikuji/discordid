@@ -1,85 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-	<meta name="viewport" content="width=device-width, height=device-height" />
-	<!-- meta info -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="DiscordID's website, made by Taichikuji!" />
-	<meta name="viewport" content="user-scalable=no, width=device-width" />
-	<link rel="icon" href="media/d-bp.svg" />
-	<link rel="stylesheet" href="main.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+	<meta name="description" content="DiscordID's website, made by Taichikuji!">
+	<link rel="icon" href="media/d-bp.svg">
+	<link rel="stylesheet" href="main.css">
 	<title id="DiscTitle">DiscordID</title>
-	<!-- twitter meta info -->
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@taichikuji" />
-	<meta name="twitter:title" content="DiscordID" />
-	<meta name="twitter:description" content="DiscordID's website, made by Taichikuji!" />
-	<meta name="twitter:creator" content="@taichikuji" />
-	<meta name="twitter:image" content="media/d-bp.svg" />
-	<meta name="twitter:image:alt" content="This is displaying because somehow this image is missing." />
-	<!--discord meta info -->
-	<meta property="og:title" content="DiscordID" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://github.com/taichikuji/discordid/" />
-	<meta property="og:image" content="media/d-bp.svg" />
-	<meta property="og:description" content="This is displaying because somehow this image is missing." />
+	<!-- Social media meta tags -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@taichikuji">
+	<meta name="twitter:title" content="DiscordID">
+	<meta name="twitter:description" content="DiscordID's website, made by Taichikuji!">
+	<meta name="twitter:creator" content="@taichikuji">
+	<meta name="twitter:image" content="media/d-bp.svg">
+	<meta name="twitter:image:alt" content="DiscordID logo">
+	<meta property="og:title" content="DiscordID">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://github.com/taichikuji/discordid/">
+	<meta property="og:image" content="media/d-bp.svg">
+	<meta property="og:description" content="Show off your Discord profile anywhere you want!">
 </head>
-
 <body>
 	<div class="outer">
 		<div class="middle">
-			<div><a href="/" target="_blank" rel="noopener" class="logo-2iEHEq logo-2niOmb"></a>
-				<div id="Square" class="inner authBox-hW6HRx theme-dark">
+			<div>
+				<a href="/" target="_blank" rel="noopener" class="discord-logo logo-header"></a>
+				<div id="Square" class="inner profile-card theme-dark">
 					<noscript>
 						<p>This website requires JavaScript in order to work.</p>
-						<style>
-							.centerimage {
-								display: none;
-							}
-						</style>
+						<style>.profile-content{display:none}</style>
 					</noscript>
-					<div class="centerimage">
-						<div id="UrlImage" class="icon LargeIcon colored margbot iconsize iconradius" role="button"></div>
-						<div class="headerText">
-							<div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignCenter-1dQNNs noWrap-3jynv6"
+					<div class="profile-content">
+						<div id="UrlImage" class="avatar avatar-full avatar-colored margin-bottom-20 avatar-large avatar-circle" role="button"></div>
+						<div class="header-text">
+							<div class="flex-container direction-row justify-start align-center no-wrap"
 								style="flex: 1 1 auto;">
-								<div
-									class="headerTagNoNickname-ENx6no headerTag-2pZJzA size14-3iUx6q weightNormal-WI4TcG size16-14cGz5 nameTag-m8r81H">
-									<span id="UserId"
-										class="username headerTagUsernameNoNickname-2_H881 weightSemiBold-NJexzi"></span>
+								<div class="tag-no-nickname tag-container font-size-14 weight-normal font-size-16 name-tag">
+									<span id="UserId" class="username username-text weight-semibold"></span>
 									<span id="NumberId" class="discriminator"></span>
 								</div>
 							</div>
 						</div>
-						<div style="flex: 1 1 auto;"
-							class="flex-1O1GKY flex-1O1GKY directionRow-3v3tfG justifyCenter-3D2jYp alignStretch-DpGPf3 noWrap-3jynv6 marginTop8-1DLZ1n">
-							<div class="pill-1dHPfk">
-								<i class="pillIconOnline-2JGlqR pillIcon-BaqtHs"></i>
-								<span
-									class="pillMessage-1btqlx medium-zmzTW- size16-14cGz5 height20-mO2eIN">Available</span>
+						<div style="flex: 1 1 auto;" class="flex-container direction-row justify-center align-stretch no-wrap margin-top-8">
+							<div class="status-pill">
+								<i class="status-online status-indicator"></i>
+								<span class="status-text font-size-16 line-height-20">Available</span>
 							</div>
 						</div>
-						<button id="AddBtn" type="button"
-							class="marginTop40-i-78cZ button-3k0cO7 button-38aScr lookFilled-1Gx00P colorBrand-3pXr91 sizeLarge-1vSeWK fullWidth-1orjjo grow-q77ONN">
-							<div id="AccessBtn" class="contents-18-Yxp"></div>
+						<button id="AddBtn" type="button" class="margin-top-40 button-sizing button-base button-filled button-primary button-large button-full-width button-auto-width">
+							<div id="AccessBtn" class="button-content"></div>
 						</button>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	<footer>
-	    <a href="/github">
-	        <span style="color: #b9bbbe;">Made with
-	            <span style="color: #ea5455;">❤</span> by Taichikuji
-	        </span>
-	    </a>
-	    <span style="color: #b9bbbe;"> · This site is not affiliated with Discord, Inc</span>
-	    <a href="/donate">
-	        <span style="color: #b9bbbe;"> · Consider donating!</span>
-	    </a>
+		<a href="/github"><span style="color: #b9bbbe;">Made with <span style="color: #ea5455;">❤</span> by Taichikuji</span></a>
+		<span style="color: #b9bbbe;"> · This site is not affiliated with Discord, Inc</span>
+		<a href="/donate"><span style="color: #b9bbbe;"> · Consider donating!</span></a>
 	</footer>
+	<!-- JavaScript -->
+	<script src="discordid.js" defer></script>
 </body>
-<!-- js -->
-<script src="discordid.js" defer></script>
 </html>
