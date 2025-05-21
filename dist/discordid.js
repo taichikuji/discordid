@@ -70,13 +70,9 @@ async function fetchUserData(id) {
     });
     
     if (!res.ok) {
-      const errMsg = res.status ? `API Error: ${res.status}` : 'API Error';
-      try {
-        const errData = await res.json();
-        throw new Error(errData.msg || errMsg);
-      } catch (e) {
-        throw new Error(e.message || errMsg);
-      }
+      let errorJson;
+      try { errorJson = await res.json(); } catch (_) { /* ignore json parse error */ }
+      throw new Error(errorJson?.msg || res.statusText || `API Error: ${res.status}`);
     }
     
     const result = await res.json();
