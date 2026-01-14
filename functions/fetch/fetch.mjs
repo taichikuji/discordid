@@ -3,13 +3,13 @@ import fetch from 'node-fetch';
 export default async req => {
   const userId = new URL(req.url).searchParams.get('id');
   
-  if (!userId || !/^\d+$/.test(userId)) 
+  if (!userId || !/^\d{17,20}$/.test(userId)) 
     return new Response(JSON.stringify({ 
       msg: userId ? "Invalid user ID format" : "Missing required 'id' parameter" 
     }), { status: 400, headers: { 'Content-Type': 'application/json' } });
   
   try {
-    const res = await fetch(`https://discordapp.com/api/users/${userId}`, {
+    const res = await fetch(`https://discord.com/api/v10/users/${userId}`, {
       headers: {
         Accept: "application/json",
         Authorization: `Bot ${process.env.DISCORD_API_KEY}`,
@@ -29,7 +29,8 @@ export default async req => {
     }), { 
       status: 200, 
       headers: { 
-        'Cache-Control': 'public, max-age=3600', 
+        'Cache-Control': 'public, max-age=3600, must-revalidate',
+        'Netlify-CDN-Cache-Control': 'public, max-age=86400, durable',
         'Content-Type': 'application/json' 
       }
     });
