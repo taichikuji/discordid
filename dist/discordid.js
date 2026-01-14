@@ -19,7 +19,7 @@ function updateUI(data) {
   const displayName = data.username || data.global_name || 'Unknown User';
   if (el.uid) el.uid.textContent = displayName;
   if (el.num) el.num.textContent = (data.discriminator && data.discriminator !== "0") ? `#${data.discriminator}` : "";
-  if (el.btnTxt) el.btnTxt.textContent = `Add ${displayName}`;
+  if (el.btnTxt) el.btnTxt.textContent = "Add Friend";
   
   if (el.title) {
     const baseTitle = el.title.textContent.split('·')[0].trim();

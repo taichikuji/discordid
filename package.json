@@ -4,7 +4,10 @@
   "description": "A profile maker powered by Discord!",
   "main": "discordid.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "npm install"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taichikuji/discordid.git"

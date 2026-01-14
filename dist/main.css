@@ -3,8 +3,8 @@
   --font-primary: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif;
   --font-headline: "Open Sans","Noto Sans",Helvetica,Arial,sans-serif;
   --discord-blue: #5865f2;
-  --discord-blue-hover: #5c6fb1;
-  --discord-blue-active: #4e5d94;
+  --discord-blue-hover: #424dc0;
+  --discord-blue-active: #3740a2;
   --text-normal: #fff;
   --text-muted: rgba(255, 255, 255, 0.6);
   --background: #36393f;
@@ -162,12 +162,12 @@ button {
   box-sizing: border-box;
   background: 0;
   border: 0;
-  border-radius: 3px;
-  font-size: 14px;
+  border-radius: 12px;
   font-weight: 500;
-  line-height: 16px;
-  padding: 2px 16px;
+  padding: 13.5px 24px;
   user-select: none;
+  font-size: 16px;
+  line-height: 24px;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
@@ -262,6 +262,8 @@ button {
   background-color: transparent;
   background-position: 50%;
   background-size: 100% 100%;
+  border: .5px solid #fff;
+  box-sizing: border-box;
 }
 
 .avatar-circle {
@@ -297,7 +299,7 @@ button {
   background: var(--background);
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
   -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
-  border-radius: 5px;
+  border-radius: 12px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
@@ -310,8 +312,8 @@ button {
 /* Logo and branding with more semantic names */
 .discord-logo {
   flex: 0 0 auto;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   background: url(media/d-b.svg) no-repeat;
   background-size: contain;
 }
@@ -409,16 +411,10 @@ footer {
     content: "";
     position: absolute;
     top: 24px;
-    height: 36px;
-    width: 36px;
+    height: 38px;
+    width: 38px;
     background: url(media/d-b.svg) no-repeat;
     background-size: contain;
     filter: invert(1);
   }
-}
-
-/* Button-specific styles */
-.button-sizing {
-  font-size: 16px;
-  line-height: 24px;
 }

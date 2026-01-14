@@ -2,3 +2,5 @@ node_modules
 .env
 .vscode
 .netlify
+deno.lock
+test/
