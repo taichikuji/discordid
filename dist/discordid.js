@@ -119,8 +119,11 @@ async function handleAddClick() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function initialize() {
   userId = new URLSearchParams(window.location.search).get("id");
   userId ? fetchUserData(userId) : displayError("No user ID provided in URL");
   el.add?.addEventListener("click", handleAddClick);
-});
+}
+
+// This file is loaded with defer, so the document has already been parsed.
+initialize();

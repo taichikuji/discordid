@@ -29,8 +29,8 @@ export default async req => {
     }), { 
       status: 200, 
       headers: { 
-        'Cache-Control': 'public, max-age=3600, must-revalidate',
-        'Netlify-CDN-Cache-Control': 'public, max-age=86400, durable',
+        'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+        'Netlify-CDN-Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800, durable',
         'Content-Type': 'application/json' 
       }
     });
