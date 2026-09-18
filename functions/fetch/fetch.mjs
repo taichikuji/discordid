@@ -1,4 +1,22 @@
+const RATE_LIMIT = 20;
+const WINDOW_MS = 60_000;
+const requestLog = new Map();
+
+const isRateLimited = ip => {
+  const now = Date.now();
+  const timestamps = (requestLog.get(ip) || []).filter(t => now - t < WINDOW_MS);
+  timestamps.push(now);
+  requestLog.set(ip, timestamps);
+  return timestamps.length > RATE_LIMIT;
+};
+
 export default async req => {
+  const ip = req.headers.get('x-nf-client-connection-ip') || 'unknown';
+  if (isRateLimited(ip))
+    return new Response(JSON.stringify({ 
+      msg: "Too many requests, please try again later" 
+    }), { status: 429, headers: { 'Content-Type': 'application/json' } });
+
   const userId = new URL(req.url).searchParams.get('id');
   
   if (!userId || !/^\d{17,20}$/.test(userId)) 
