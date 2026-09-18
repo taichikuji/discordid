@@ -1,3 +1,12 @@
+export const config = {
+  path: '/.netlify/functions/fetch',
+  rateLimit: {
+    windowLimit: 10,
+    windowSize: 60,
+    aggregateBy: ['ip', 'domain']
+  }
+};
+
 export default async req => {
   const userId = new URL(req.url).searchParams.get('id');
   
