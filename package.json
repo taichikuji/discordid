@@ -7,7 +7,8 @@
   "packageManager": "bun@1.4.2",
   "scripts": {
     "dev": "netlify dev",
-    "build": "bun install"
+    "build": "bun install",
+    "test": "bun test"
   },
   "repository": {
     "type": "git",
