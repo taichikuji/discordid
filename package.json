@@ -4,9 +4,10 @@
   "description": "A profile maker powered by Discord!",
   "main": "discordid.js",
   "type": "module",
+  "packageManager": "bun@1.4.2",
   "scripts": {
     "dev": "netlify dev",
-    "build": "npm install"
+    "build": "bun install"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/taichikuji/discordid/issues"
   },
-  "homepage": "https://github.com/taichikuji/discordid#readme",
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
+  "homepage": "https://github.com/taichikuji/discordid#readme"
 }

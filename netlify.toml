@@ -1,4 +1,7 @@
 [build]
     publish = "dist"
     functions = "functions"
-    command = "npm install"
+    command = "bun install"
+
+[build.environment]
+    BUN_VERSION = "1.4.2"

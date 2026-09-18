@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export default async req => {
   const userId = new URL(req.url).searchParams.get('id');
   
